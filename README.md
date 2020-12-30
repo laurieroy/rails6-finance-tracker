@@ -23,6 +23,11 @@ Learning goals:
 Third Party Gems/Tools used:
 * Devise for authentication
 
+STEPS TAKEN:
+* Installed Devise, creating User
+* Installed Bootstrap 4.5.3 for styling
+
+
 <!-- This README would normally document whatever steps are necessary to get the
 application up and running. -->
 
