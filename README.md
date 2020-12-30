@@ -22,6 +22,7 @@ Learning goals:
 
 Third Party Gems/Tools used:
 * Devise for authentication
+* Devise bootstrap views
 
 STEPS TAKEN:
 * Installed Devise, creating User
