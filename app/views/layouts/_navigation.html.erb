@@ -14,17 +14,20 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Friends TBD</a>
 					</li>
-					<%# <li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							User-meh, move
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+							role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Profile
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Log in</a>
-							<a class="dropdown-item" href="#">Log out</a>
+							<%= link_to edit_user_registration_path, class:"dropdown-item" do %>
+								<%= fa_icon 'edit'  %> Edit Profile
+							<% end %>
+							<%# <a class="dropdown-item" href="#">Log out</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Sign Up</a>
+							<a class="dropdown-item" href="#">Sign Up</a> %>
 						</div>
-					</li> %>
+					</li>
 				
 				</ul>
 				<ul class="navbar-nav ml-auto">
