@@ -22,7 +22,7 @@ Learning goals:
 
 Third Party Gems/Tools used:
 * Devise for authentication
-* Devise bootstrap views
+* Devise bootstrap views + Bootstrap 4.5
 * IEX Finance API
 
 STEPS TAKEN:
@@ -31,6 +31,19 @@ STEPS TAKEN:
 * Updated form and messages styling
 * Create Stock Model
 	* Attibutes: name, ticker_symbol, price
+* Add IEX API key using secure credentials
+* Install Devise Bootstrap Views
+* Build stock lookup form, submit using Ajax
+* Build User - Stock relationship
+* Add Stocks list view
+	* Restricted to 10 stocks/user
+	* Handle invalid search results
+	* Remove stock from list
+* Modify User to have first and last names
+	* Modify Devise forms to accept these fields
+
+
+
 
 To download and use this app:
 Fork app. Run `bundle install` to install the gems. In app/models/stock.rb, replace [:sandbox_api_key] with your new publishable key. If you are using the sandbox (free tier) leave the endpoint as is. If you are using a paid tier, switch out the endpoint following the #.
@@ -41,10 +54,9 @@ You have a choice of a free or a variety of paid plans.  The free tier works fin
 <!-- This README would normally document whatever steps are necessary to get the
 application up and running. -->
 
+
+* Ruby version 2.6.3
 <!-- Things you may want to cover:
-
-* Ruby version
-
 * System dependencies
 
 * Configuration
