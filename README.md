@@ -41,8 +41,8 @@ STEPS TAKEN:
 	* Remove stock from list
 * Modify User to have first and last names
 	* Modify Devise forms to accept these fields
-
-
+* Add self-referential association for friends
+* Update nav dropdown friends to show a list of friends, build list
 
 
 To download and use this app:

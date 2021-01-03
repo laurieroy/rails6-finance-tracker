@@ -1,5 +1,10 @@
-
 <h1>Welcome to the FinanceTracker App</h1>
-<p>Welcome to the home page for now</p>
-
-<%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
+<p>This is a demonstration app.</p>
+<p>User signs-up with an e-mail address, and can <%= link_to 'add',
+	edit_user_registration_path %> first and last name if they wish.
+	The user can <%= link_to 'search', my_portfolio_path %> 
+	for a stock by ticker symbol. The company name and latest price are
+	 also returned. User can add the stock to a portfolio listing. 
+	 Each user can track up to 10 stocks.</p>
+<p>Users may <%= link_to 'add', my_friends_path %> other users as friends. </p>
+<%# Once added, they can see what stock their friends are followng, and add the stocks to their portfolio. %>

@@ -2,33 +2,42 @@
   <div class="container">
 		<%= link_to 'FinanceTracker', root_path, class: "navbar-brand", id: "logo" %>
 		<% if current_user %>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item <%= 'active' if request.path == my_portfolio_path %>">
+					<li class="nav-item <%= 'active' if request.path == my_portfolio_path %> ">
 						<%= link_to 'My Portfolio', my_portfolio_path, class:"nav-link" %>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Friends TBD</a>
-					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+							role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Friends
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<%= link_to 'My Friends', my_friends_path, class: "dropdown-item" %>
+							<div class="dropdown-divider"></div>
+							<%= link_to 'All Users', users_path, class: "dropdown-item" %>
+					</li>	
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
 							role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Profile
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<%= link_to edit_user_registration_path, class:"dropdown-item" do %>
-								<%= fa_icon 'edit'  %> Edit Profile
+							<%= link_to edit_user_registration_path, 
+								class:"dropdown-item" do %>
+								<%= fa_icon 'edit' %> Edit Profile
 							<% end %>
 							<%# <a class="dropdown-item" href="#">Log out</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="#">Sign Up</a> %>
 						</div>
 					</li>
-				
 				</ul>
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item user-name">
@@ -37,7 +46,6 @@
 					<li class="nav-item">
 						<%= link_to("Log out", destroy_user_session_path, method: :delete,
 												class: "btn btn-danger"	) %>
-
 					</li>
 				</ul>
 				<%# <form class="form-inline my-2 my-lg-0">

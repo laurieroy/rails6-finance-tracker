@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<%# <div class="search-area"> %>
+	<h3>Registered users:</h3>
+	<%# <%= form_tag search_friendship_path, remote: true, method: :get do %>
+		<%# <div class="form-group row"> %>
+			<%# <div class="col-sm-9 no-right-padding">
+				<%= text_field_tag :full_name, params[:email], placeholder: "No. Stocks Followed", %>
+					<%# autofocus: true, class: "form-control form-control-lg" %>
+			<%# </div> %>
+
+		<%# </div> %>
+	<%# <% end %> 
+<%# </div> %>
+<% if !@tracked_friends.empty? %> 
+	<%= render 'users/list' %>
+<% end %>
