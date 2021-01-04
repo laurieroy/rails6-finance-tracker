@@ -43,6 +43,7 @@ STEPS TAKEN:
 	* Modify Devise forms to accept these fields
 * Add self-referential association for friends
 * Update nav dropdown friends to show a list of friends, build list
+* Add search friends functionality
 
 
 To download and use this app:
