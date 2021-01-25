@@ -23,20 +23,3 @@
 		<% end %>
 	</div>
 <% end %>
-
-<% if @friend %>
-	<div class="card card-header results-block">
-		<strong>Full Name: </strong> <%= @user.full_name %>
-		<strong>First Name: </strong> <%= @user.first_name %>
-		<strong>Last Name: </strong> <%= @suser.last_name %>
-		<strong>Email: $</strong> <%= @user.email %>
-		<% if current_user.can_track_friend?(@stock.ticker) %>
-			<%= link_to 'Add to Portfolio', user_stocks_path(user: current_user,
-				friend: @user.full_name), class: "btn btn-xs btn-success", method: :post %>
-		<% else %>
-			<span class="badge badge-secondary">
-				You are already tracking this friend.
-			</span>
-		<% end %>
-	</div>
-<% end %>

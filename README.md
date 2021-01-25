@@ -33,7 +33,8 @@ STEPS TAKEN:
 	* Attibutes: name, ticker_symbol, price
 * Add IEX API key using secure credentials
 * Install Devise Bootstrap Views
-* Build stock lookup form, submit using Ajax
+* Build stock lookup form, submit using AJAX
+* Extract result to partial
 * Build User - Stock relationship
 * Add Stocks list view
 	* Restricted to 10 stocks/user
@@ -44,10 +45,14 @@ STEPS TAKEN:
 * Add self-referential association for friends
 * Update nav dropdown friends to show a list of friends, build list
 * Add search friends functionality
+	* Build form
+	* Create search partial
+	
 
 
 To download and use this app:
-Fork app. Run `bundle install` to install the gems. In app/models/stock.rb, replace [:sandbox_api_key] with your new publishable key. If you are using the sandbox (free tier) leave the endpoint as is. If you are using a paid tier, switch out the endpoint following the #.
+
+Clone app. Run `bundle install` to install the gems. In app/models/stock.rb, replace [:sandbox_api_key] with your new publishable key. If you are using the sandbox (free tier) leave the endpoint as is. If you are using a paid tier, switch out the endpoint following the #.
 
 SIGN UP FOR THE IEX API:
 https://iexcloud.io/s/3856afef 
@@ -57,19 +62,11 @@ application up and running. -->
 
 
 * Ruby version 2.6.3
-<!-- Things you may want to cover:
-* System dependencies
+* Rails 6.1.0
+* BS 4.5.3
+* IEX API
 
-* Configuration
+### TODO:
+* Use redis to search friends
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ... -->

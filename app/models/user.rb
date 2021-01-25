@@ -24,6 +24,10 @@ class User < ApplicationRecord
     "Anonymous"
   end
 
+  def not_friends_with?(id_of_friend)
+    !self.friends.where(id: id_of_friend ).exists?
+  end
+
   def self.matches(field_name, param)
     where("#{field_name} like ?", "%#{param}%")
   end
