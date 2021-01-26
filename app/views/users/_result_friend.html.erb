@@ -2,19 +2,20 @@
 	<%= render 'layouts/messages' %>
 </div>
 
-<% if @friends %>
+<% if @tracked_friends %>
 	<div class="card card-header results-block">
 		<table class="col-md-12">
 			<tbody>
-				<% @friends.each do |friend| %>	
+				<% @tracked_friends.each do |friend| %>	
 					<tr>
 						<td><strong>Full Name: </strong> <%= friend.full_name %></td>
 						<td><strong>Email: $</strong> <%= friend.email %></td>
-						<td><strong>Actions: </strong> <%= link_to "View Profile", '#', 
+						<td><strong>Actions: </strong> <%= link_to "View Profile",
+							user_path(friend), 
 							class: "btn btn-sm btn-success" %>
 							<% if current_user.not_friends_with?(friend.id) %>
-								<%= link_to 'Follow Friend', 'friendships_path(friend: friend)', class: "btn btn-sm btn-success",
-									method: :post %>
+								<%= link_to 'Follow Friend', friendships_path(friend: friend),
+									class: "btn btn-sm btn-info", method: :post %>
 							<% else %>
 								<span class="badge badge-secondary">
 									You are already following this friend.
@@ -22,7 +23,6 @@
 							<% end %>
 						</td>
 					</tr>
-
 					<% end %>
 			</tbody>
 		</table>
