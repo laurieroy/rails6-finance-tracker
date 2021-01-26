@@ -47,7 +47,10 @@ STEPS TAKEN:
 * Add search friends functionality
 	* Build form
 	* Create search partial
-	
+* Add / Remove friend
+* View friend's profile
+* See what stocks friend follows, and add if tracking fewer than 10 stocks
+* End of tutorial commit 5f06df3f3082185b0
 
 
 To download and use this app:
@@ -60,13 +63,14 @@ You have a choice of a free or a variety of paid plans.  The free tier works fin
 <!-- This README would normally document whatever steps are necessary to get the
 application up and running. -->
 
-
+## Technologies Used:
 * Ruby version 2.6.3
 * Rails 6.1.0
-* BS 4.5.3
+* Bootstrap 4.5.3
 * IEX API
+* SQLite3 db in dev, PostgreSQL in development
 
 ### TODO:
 * Use redis to search friends
-
-
+* If search stock in lowercase, can add duplicate stock
+* Add Admin role to view all users
