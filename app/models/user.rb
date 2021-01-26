@@ -12,11 +12,14 @@ class User < ApplicationRecord
     under_stock_limit? && !stock_already_tracked?(ticker_symbol)
   end
 
+  def except_current_user(users)
+    users.reject { |user| user.id == self.id }
+  end
+  
   def friend_already_tracked?(ticker_symbol)
     stock = Stock.check_db(ticker_symbol)
     return false unless stock
     stocks.where(id: stock.id).exists?
-    
   end
 
   def full_name
@@ -25,7 +28,7 @@ class User < ApplicationRecord
   end
 
   def not_friends_with?(id_of_friend)
-    !self.friends.where(id: id_of_friend ).exists?
+    !self.friends.where(id: id_of_friend).exists?
   end
 
   def self.matches(field_name, param)
