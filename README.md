@@ -1,5 +1,6 @@
-# Finance Tracker App
+# Finance Tracker App - WIP
 ### Created Dec 2020 as part of a Ruby on Rails tutorial by Mashrur Hossain
+![stock portfolio screenshot](app/assets/images/financeTracker-myPortfolio-alreadyTrackingTSLA.png)
 
 REQUIREMENTS:
 * Authentication system, users can sign-up, edit their profile, login/out
@@ -71,6 +72,7 @@ application up and running. -->
 * SQLite3 db in dev, PostgreSQL in development
 
 ### TODO:
+* Fix table shift
 * Use redis to search friends
 * If search stock in lowercase, can add duplicate stock
 * Add Admin role to view all users
